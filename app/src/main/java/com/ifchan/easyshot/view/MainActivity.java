@@ -30,8 +30,7 @@ public class MainActivity extends AppCompatActivity implements EasyPermissions.P
     private void requestPermission() {
         if (!EasyPermissions.hasPermissions(this, PERMISSIONS)) {
             EasyPermissions.requestPermissions(this, "Need write sdcard permission to save " +
-                    "screenshot.", REQUEST_CODE, PERMISSIONS);
-        }
+                    "screenshot.", REQUEST_CODE, PERMISSIONS        }
     }
 
     @Override
