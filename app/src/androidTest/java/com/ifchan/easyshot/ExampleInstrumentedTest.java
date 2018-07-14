@@ -1,8 +1,11 @@
 package com.ifchan.easyshot;
 
 import android.content.Context;
+import android.graphics.Bitmap;
 import android.support.test.InstrumentationRegistry;
 import android.support.test.runner.AndroidJUnit4;
+
+import com.ifchan.easyshot.util.ScreenshotUtil;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
