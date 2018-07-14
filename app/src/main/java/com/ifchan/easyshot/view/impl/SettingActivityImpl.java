@@ -20,7 +20,7 @@ import java.util.List;
 import pub.devrel.easypermissions.EasyPermissions;
 
 public class SettingActivityImpl extends AppCompatActivity implements EasyPermissions
-        .PermissionCallbacks, ScreenshotUtil.Callback{
+        .PermissionCallbacks{
     private final String TAG = "@SettingActivityImpl";
     public static final String[] PERMISSIONS = {
             Manifest.permission.WRITE_EXTERNAL_STORAGE
@@ -55,7 +55,7 @@ public class SettingActivityImpl extends AppCompatActivity implements EasyPermis
                     Log.d(TAG, "User canceled");
                 }
                 Log.d(TAG, "Start.");
-                ScreenshotUtil.INSTANCE.doingScreenCapturing(resultCode, data, this);
+                ScreenshotUtil.INSTANCE.doingScreenCapturing(resultCode, data);
                 break;
         }
     }
@@ -92,8 +92,4 @@ public class SettingActivityImpl extends AppCompatActivity implements EasyPermis
                 MEDIA_REQUEST_CODE);
     }
 
-    @Override
-    public void OnScreenShotComplete(Bitmap bitmap) {
-        BitmapUtil.saveBitmapToFile(bitmap, 100);
-    }
 }

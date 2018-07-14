@@ -11,7 +11,7 @@ import java.util.Date;
 public class BitmapUtil {
     public static void saveBitmapToFile(Bitmap bitmap, int quality) {
         File file = new File(Environment.getExternalStorageDirectory() + "/EasyShot/" + new Date
-                ().getTime() + ".PNG");
+                ().getTime() + ".JPEG");
         if (!file.getParentFile().exists()) {
             file.getParentFile().mkdirs();
         }
